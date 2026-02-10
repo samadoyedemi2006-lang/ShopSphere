@@ -7,11 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Loader2, MapPin, ShieldCheck, Building2, Copy, Check } from "lucide-react";
 import { CartItem, ShippingAddress } from "@/types";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://backend-02ix.onrender.com";
 
 const BANK_DETAILS = {
   bankName: "Opay Bank",
-  accountName: "Oyedemi AbdulSamad",
+  accountName: "Oyedemi AbdulSamad Abiola",
   accountNumber: "9156320616"
 };
 

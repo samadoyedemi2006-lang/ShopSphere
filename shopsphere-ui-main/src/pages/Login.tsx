@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Lock, Loader2, ShoppingBag } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://backend-02ix.onrender.com";
 
 const Login = () => {
   const [email, setEmail] = useState("");

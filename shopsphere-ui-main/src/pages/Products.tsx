@@ -3,7 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import { Loader2, Package, AlertCircle } from "lucide-react";
 import { Product } from "@/types";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://backend-02ix.onrender.com";
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);

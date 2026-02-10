@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Order, OrderStatus } from "@/types";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://backend-02ix.onrender.com";
 
 const statusColors: Record<OrderStatus, string> = {
   pending: "bg-yellow-500/10 text-yellow-600 border-yellow-500/20",

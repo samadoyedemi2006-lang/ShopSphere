@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plus, Loader2, CheckCircle2, ImageIcon, DollarSign, Package } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://backend-02ix.onrender.com";
 
 const AdminProducts = () => {
   const [name, setName] = useState("");
