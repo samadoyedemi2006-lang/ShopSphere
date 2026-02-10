@@ -17,12 +17,31 @@ const Cart = () => {
     loadCart();
   }, []);
 
-  const loadCart = () => {
+ const loadCart = () => {
+  try {
     const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      setCartItems(JSON.parse(savedCart));
+    if (!savedCart) {
+      setCartItems([]);
+      return;
     }
-  };
+
+    const parsed = JSON.parse(savedCart);
+
+    // Validate structure
+    if (!Array.isArray(parsed)) {
+      localStorage.removeItem("cart");
+      setCartItems([]);
+      return;
+    }
+
+    setCartItems(parsed);
+  } catch (error) {
+    console.error("Cart parse error:", error);
+    localStorage.removeItem("cart");
+    setCartItems([]);
+  }
+};
+
 
   const saveCart = (items: CartItem[]) => {
     localStorage.setItem("cart", JSON.stringify(items));
@@ -111,7 +130,9 @@ const Cart = () => {
         {/* Cart Items */}
         <div className="lg:col-span-2">
           <div className="space-y-4">
-            {cartItems.map((item) => (
+            {cartItems.map((item) => {
+                if (!item.product || !item.product._id) return null;
+              return (
               <Card key={item.product._id} className="overflow-hidden">
                 <div className="flex flex-col sm:flex-row">
                   {/* Product Image */}
@@ -185,7 +206,7 @@ const Cart = () => {
                   </CardContent>
                 </div>
               </Card>
-            ))}
+            )})}
           </div>
         </div>
 
