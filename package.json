@@ -1,4 +1,10 @@
 {
+  "homepage": "https://samadoyedemi2006-lang.github.io/ShopSphere/",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  
   "dependencies": {
     "gh-pages": "^6.3.0"
   }

@@ -10,11 +10,9 @@ import { CartItem, ShippingAddress } from "@/types";
 const API_BASE = "http://localhost:5000";
 
 const BANK_DETAILS = {
-  bankName: "First National Bank",
-  accountName: "Your Store Name Ltd",
-  accountNumber: "1234567890",
-  routingNumber: "021000021",
-  swiftCode: "FNBAUS33",
+  bankName: "Opay Bank",
+  accountName: "Oyedemi AbdulSamad",
+  accountNumber: "9156320616"
 };
 
 const Checkout = () => {
@@ -288,9 +286,7 @@ const Checkout = () => {
                       {[
                         { label: "Bank Name", value: BANK_DETAILS.bankName, key: "bankName" },
                         { label: "Account Name", value: BANK_DETAILS.accountName, key: "accountName" },
-                        { label: "Account Number", value: BANK_DETAILS.accountNumber, key: "accountNumber" },
-                        { label: "Routing Number", value: BANK_DETAILS.routingNumber, key: "routingNumber" },
-                        { label: "SWIFT Code", value: BANK_DETAILS.swiftCode, key: "swiftCode" },
+                        { label: "Account Number", value: BANK_DETAILS.accountNumber, key: "accountNumber" }
                       ].map((item) => (
                         <div key={item.key} className="flex items-center justify-between">
                           <div>
